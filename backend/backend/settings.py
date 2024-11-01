@@ -42,8 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Custom Apps
-    'store',
     'userauths',
+    'store',
     'vendor',
     'customer',
     'api',
@@ -51,8 +51,8 @@ INSTALLED_APPS = [
     # Third Party Apps
     'rest_framework',
     'rest_framework_simplejwt.token_blacklist',
-    'drf_yasg',
     'corsheaders',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -72,7 +72,7 @@ ROOT_URLCONF = 'backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -184,30 +184,30 @@ SIMPLE_JWT = {
 }
 
 
-JAZZMIN_SETTINGS = {
-    'site_title': "theRevApp",
-    'site_header': "theRevApp",
-    'site_brand': "theRevApp Store",
-    'welcome_sign': "Welcome to theRevApp store",
-    'copyright': "theRevApp",
-    'show_sidebar': True,
-    'show_ui_builder': True,
-}
+# JAZZMIN_SETTINGS = {
+#     'site_title': "theRevnizer",
+#     'site_header': "theRevApp",
+#     'site_brand': "theRevApp Store",
+#     'welcome_sign': "Welcome to theRevApp store",
+#     'copyright': "theRevApp",
+#     'show_sidebar': True,
+#     'show_ui_builder': True,
+# }
 
 JAZZMIN_SETTINGS = {
-    "site_title": "Desphixs",
-    "site_header": "Desphixs",
-    "site_brand": "Modern Marketplace ",
-    "site_icon": "images/favicon.ico",
-    "site_logo": "images/logos/logo.jpg",
-    "welcome_sign": "Welcome To Desphixs",
-    "copyright": "All right reserved to Desphixs",
+    "site_title": "theRevApp",
+    "site_header": "theRevApp",
+    "site_brand": "Marketplace",
+    # "site_icon": "images/favicon.ico",
+    # "site_logo": "images/logos/logo.jpg",
+    "welcome_sign": "Welcome To theRevApp",
+    "copyright": "theRevApp",
     "user_avatar": "images/photos/logo.jpg",
-    "topmenu_links": [
-        {"name": "Dashboard", "url": "home",
-            "permissions": ["auth.view_user"]},
-        {"model": "auth.User"},
-    ],
+    # "topmenu_links": [
+    #     {"name": "Dashboard", "url": "home",
+    #         "permissions": ["auth.view_user"]},
+    #     {"model": "auth.User"},
+    # ],
     "show_sidebar": True,
     "navigation_expanded": True,
     "order_with_respect_to": [
@@ -256,7 +256,7 @@ JAZZMIN_SETTINGS = {
     "related_modal_active": False,
 
     "custom_js": None,
-    "show_ui_builder": False,
+    "show_ui_builder": True,
 
     "changeform_format": "horizontal_tabs",
     "changeform_format_overrides": {
@@ -275,10 +275,10 @@ JAZZMIN_UI_TWEAKS = {
     "accent": "accent-olive",
     "navbar": "navbar-indigo navbar-dark",
     "no_navbar_border": False,
-    "navbar_fixed": False,
+    "navbar_fixed": True,
     "layout_boxed": False,
     "footer_fixed": False,
-    "sidebar_fixed": False,
+    "sidebar_fixed": True,
     "sidebar": "sidebar-dark-indigo",
     "sidebar_nav_small_text": False,
     "sidebar_disable_expand": False,
