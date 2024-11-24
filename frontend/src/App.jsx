@@ -10,6 +10,7 @@ import Logout from "./views/auth/Logout";
 import Register from "./views/auth/Register";
 import StoreFooter from "./views/base/StoreFooter";
 import StoreHeader from "./views/base/StoreHeader";
+import Cart from "./views/store/Cart";
 import ProductDetail from "./views/store/ProductDetail";
 import Products from "./views/store/Products";
 
@@ -27,6 +28,8 @@ function App() {
           <Route path="/create-new-password" element={<CreatePassword />} />
 
           {/* Store Components*/}
+          <Route path="/detail/:slug" element={<ProductDetail />} />
+          <Route path="/cart/" element={<Cart />} />
           <Route path="/" element={<Products />} />
           <Route path="/detail/:slug/" element={<ProductDetail />} />
         </Routes>
